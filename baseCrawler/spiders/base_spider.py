@@ -6,7 +6,7 @@ class BaseSpider(scrapy.Spider):
     name = "base"
 
     def start_requests(self):
-        base_url = 'example.com/'
+        base_url = 'http://example.com/'
         yield scrapy.Request(url=base_url, callback=self.parse)
 
     def parse(self, response):
